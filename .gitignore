@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+data/
+private/
+*.parquet
+*.csv
+*.duckdb*
+*.zip
+.env
+.DS_Store
