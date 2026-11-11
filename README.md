@@ -23,10 +23,13 @@ Start JupyterLab from the repository root with `python -m jupyterlab`. Open the 
 1. [Coverage and data quality](eda/01_coverage.ipynb) checks the observation window, missing fields, and volume by game.
 2. [Account behavior](eda/02_account_behavior.ipynb) compares activity and house win rates across account-volume bands.
 
+3. [Wager relationships](eda/03_wager_relationships.ipynb) explores stake distributions by game and compares actual and expected house win across stake bands.
+4. [Timing and stake features](eda/04_timing_and_stake_features.ipynb) builds account-game features for pace and stake consistency, then compares feature relationships across games.
+
 ## Coordination audit
 
-3. [Mirrored wagers](coordination_audit/01_mirrored_wagers.ipynb) tests whether repeated opposite-side bets at similar stakes exceed what the accounts' side preferences would predict.
-4. [Scores and rebates](coordination_audit/02_scores_and_rebates.ipynb) checks the observed rebate rates and looks for changes in the Banker score at the start of recording.
+5. [Mirrored wagers](coordination_audit/01_mirrored_wagers.ipynb) tests whether repeated opposite-side bets at similar stakes exceed what the accounts' side preferences would predict.
+6. [Scores and rebates](coordination_audit/02_scores_and_rebates.ipynb) checks the observed rebate rates and looks for changes in the Banker score at the start of recording.
 
 The checked-in run found **182 retained links across 192 accounts in 36 groups**. Tier A links were opposite on a median of 100% of shared rounds, versus about 51% expected from side preferences. Mirrored pair turnover had a 1.35% house win rate.
 
