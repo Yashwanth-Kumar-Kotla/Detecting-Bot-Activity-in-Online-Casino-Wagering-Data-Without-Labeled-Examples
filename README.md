@@ -15,3 +15,10 @@ python ingestion/ingest.py "/path/to/drive-downloads"
 ```
 
 The catalog is written to `private/wagers.duckdb`. It points to the downloaded files in place. Keep the raw files and generated databases out of Git.
+
+## Exploratory analysis
+
+Start JupyterLab from the repository root with `python -m jupyterlab`. Open the notebooks in order and use **Restart Kernel and Run All Cells**. The saved outputs let you read them without access to the data.
+
+1. [Coverage and data quality](eda/01_coverage.ipynb) checks the observation window, missing fields, and volume by game.
+2. [Account behavior](eda/02_account_behavior.ipynb) compares activity and house win rates across account-volume bands.
