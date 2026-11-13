@@ -30,6 +30,8 @@ Start JupyterLab from the repository root with `python -m jupyterlab`. Open the 
 
 5. [Mirrored wagers](coordination_audit/01_mirrored_wagers.ipynb) tests whether repeated opposite-side bets at similar stakes exceed what the accounts' side preferences would predict.
 6. [Scores and rebates](coordination_audit/02_scores_and_rebates.ipynb) checks the observed rebate rates and looks for changes in the Banker score at the start of recording.
+7. [Matched account comparison](coordination_audit/03_matched_account_comparison.ipynb) compares 192 flagged account-game profiles from 152 accounts with profiles matched on game and wager count. Median exact-stake repetition was 61.3% for flagged profiles and 33.5% for matched profiles. Matching is descriptive, and the audit itself uses stake evidence.
+8. [Threshold sensitivity](coordination_audit/04_threshold_sensitivity.ipynb) rebuilds the groups at minimum mirror counts of 20, 30, and 50. The runs retained 208, 192, and 155 accounts respectively. The largest group had 90, 87, and 83 accounts.
 
 The checked-in run found **182 retained links across 192 accounts in 36 groups**. Tier A links were opposite on a median of 100% of shared rounds, versus about 51% expected from side preferences. Mirrored pair turnover had a 1.35% house win rate.
 

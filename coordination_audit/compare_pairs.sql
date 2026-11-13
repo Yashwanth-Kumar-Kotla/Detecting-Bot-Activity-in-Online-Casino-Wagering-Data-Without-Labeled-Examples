@@ -34,7 +34,7 @@ CREATE TEMP TABLE candidates AS
 SELECT least(a.member, b.member) AS account_a, greatest(a.member, b.member) AS account_b
 FROM plays a JOIN plays b USING (round_id, stake_bucket)
 WHERE a.banker_side AND NOT b.banker_side
-GROUP BY ALL HAVING count(*) >= 30;
+GROUP BY ALL HAVING count(*) >= coalesce(getvariable('min_mirrors')::INTEGER, 30);
 
 CREATE TEMP TABLE shared AS
 SELECT c.account_a, c.account_b, a.round_id, a.first_wager,
